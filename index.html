@@ -9,29 +9,56 @@
     <!-- ========================daisy ui & tailwind css================ -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
 </head>
 
-<body class="p-5">
-    <header>
-        <div class="form-control w-full max-w-xs w-1/2 mx-auto">
+<body>
+    <header class="pt-5 pr-5 pl-5">
+        <div class="form-control w-full max-w-xs mb-8 w-3/2 mx-auto">
             <label class="label">
-                <span class="label-text">Search your Product</span>
+                <span class="label-text">Search Your Product</span>
                 <span class="label-text-alt">Press<kbd class="kbd kbd-sm">Enter</kbd> </span>
             </label>
-            <input type="text" placeholder="Search What You Want!" class="input input-bordered w-full max-w-xs" />
+            <input id="search-field" type="text" placeholder="Search What You Want!"
+                class="input input-bordered w-full max-w-xs" />
         </div>
+        <!-- =======not found mesage========= -->
+        <h2 class="text-center text-red-400 text-3xl" id="not-found"></h2>
     </header>
-    <main>
+
+    <main class="pt-5 pr-5 pl-5">
         <div class="flex ...">
-            <div class="flex-none w-1/7 ">
-                <ul id="all-menu" class="menu w-100 bg-secondary text-secondary-content p-2 rounded-box">
+            <div class="flex-none w-1/7 mr-3">
+                <ul id="all-menu" class="menu w-100 bg-orange-400 text-white p-2 rounded-box">
                     <!-- <li><a>Item 1</a></li>
                     <li><a>Item 2</a></li>
                     <li><a>Item 3</a></li> -->
                 </ul>
             </div>
-            <div class="grow">
-                02
+            <!-- ==========products=========== -->
+            <div id="products-container" class="grow grid grid-cols-4 gap-4">
+
+            </div>
+        </div>
+        <!-- =============modal============== -->
+        <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+        <div class="modal">
+            <div class="modal-box relative">
+                <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                <div id="modal-body">
+                    <!-- <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
+                    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia
+                        for
+                        free!</p> -->
+                </div>
             </div>
         </div>
     </main>
