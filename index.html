@@ -6,16 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Search </title>
-    <!-- ========================daisy ui================ -->
+    <!-- ========================daisy ui & tailwind css================ -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <h1>Search Your Desire Product!!</h1>
-
-
-    <!-- ================daisy ui script============ -->
-    <script src="https://cdn.tailwindcss.com"></script>
+<body class="p-5">
+    <header>
+        <div class="form-control w-full max-w-xs w-1/2 mx-auto">
+            <label class="label">
+                <span class="label-text">Search your Product</span>
+                <span class="label-text-alt">Press<kbd class="kbd kbd-sm">Enter</kbd> </span>
+            </label>
+            <input type="text" placeholder="Search What You Want!" class="input input-bordered w-full max-w-xs" />
+        </div>
+    </header>
+    <main>
+        <div class="flex ...">
+            <div class="flex-none w-1/7 ">
+                <ul id="all-menu" class="menu w-100 bg-secondary text-secondary-content p-2 rounded-box">
+                    <!-- <li><a>Item 1</a></li>
+                    <li><a>Item 2</a></li>
+                    <li><a>Item 3</a></li> -->
+                </ul>
+            </div>
+            <div class="grow">
+                02
+            </div>
+        </div>
+    </main>
     <!-- ===============js========== -->
     <script src="js/app.js"></script>
 </body>
